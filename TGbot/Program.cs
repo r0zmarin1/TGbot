@@ -229,16 +229,16 @@ internal class Program
         switch (update.CallbackQuery?.Data)
         {
             case "base_menuM":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/base_menu.jpg"), caption: "супер! что дальше?", replyMarkup: base_menuM, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/base_menu1.jpg"), caption: "супер! что дальше?", replyMarkup: base_menuM, cancellationToken: token);
                 break;
             case "special_menuM":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/special.png"), caption: "супер! что дальше?", replyMarkup: special_menuM, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/special1.png"), caption: "супер! что дальше?", replyMarkup: special_menuM, cancellationToken: token);
                 break;
             case "base_menuS":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/base_menu.jpg"), caption: "супер! что дальше?", replyMarkup: base_menuS, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/base_menu1.jpg"), caption: "супер! что дальше?", replyMarkup: base_menuS, cancellationToken: token);
                 break;
             case "special_menuS":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/special.png"), caption: "супер! что дальше?", replyMarkup: special_menuS, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/special1.png"), caption: "супер! что дальше?", replyMarkup: special_menuS, cancellationToken: token);
                 break;
         }
 
@@ -272,7 +272,7 @@ internal class Program
         switch (update.CallbackQuery?.Data)
         {
             case "adds":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/adds.png"), caption: "супер! что дальше?", replyMarkup: adds, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/adds1.png"), caption: "супер! что дальше?", replyMarkup: adds, cancellationToken: token);
                 break;
 
             case "alternative_milk":
@@ -1759,17 +1759,17 @@ internal class Program
         switch (update.CallbackQuery?.Data)
         {
             case "max":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu.jpeg"), caption: "глянь меню и выбери категорию", replyMarkup: newOrderM, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu1.jpeg"), caption: "глянь меню и выбери категорию", replyMarkup: newOrderM, cancellationToken: token);
                 break;
             case "small":
-                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu.jpeg"), caption: "глянь меню и выбери категорию", replyMarkup: newOrderS, cancellationToken: token);
+                await client.SendPhotoAsync(update.CallbackQuery.From.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu1.jpeg"), caption: "глянь меню и выбери категорию", replyMarkup: newOrderS, cancellationToken: token);
                 break;
         }
 
         switch (update.Message?.Text?.ToLower())
         {
             case "/start":
-                await client.SendPhotoAsync(update.Message.Chat.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/greeting_photo.jpeg"), caption: "На связи Кисса-бот!\nВыбери нужную команду;)", replyMarkup: replyKeyboardMarkup, cancellationToken: token);
+                await client.SendPhotoAsync(update.Message.Chat.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/greeting_photo1.jpeg"), caption: "На связи Кисса-бот!\nВыбери нужную команду;)", replyMarkup: replyKeyboardMarkup, cancellationToken: token);
                 string sql = "SELECT id, phone_number FROM customer WHERE id = @id";
                 using (MySqlCommand checkcustomers = new MySqlCommand(sql, connect))
                 {
@@ -1912,7 +1912,7 @@ internal class Program
                 break;
 
             case "меню":
-                await client.SendPhotoAsync(update.Message.Chat.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu.jpeg"), replyMarkup: replyKeyboardMarkup, cancellationToken: token);
+                await client.SendPhotoAsync(update.Message.Chat.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu1.jpeg"), replyMarkup: replyKeyboardMarkup, cancellationToken: token);
                 update.Message.Text = null;
                 break;
 
