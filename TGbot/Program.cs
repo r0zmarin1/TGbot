@@ -1909,10 +1909,11 @@ internal class Program
                         }
                     }
                 }
-                break;
+                break; 
 
             case "меню":
-                await client.SendPhotoAsync(update.Message.Chat.Id, InputFile.FromUri("https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/docs/menu1.jpeg"), replyMarkup: replyKeyboardMarkup, cancellationToken: token);
+                string url = "https://raw.githubusercontent.com/r0zmarin1/TGbot/master/TGbot/pictures/menu1.jpeg";
+                await client.SendPhotoAsync(update.Message.Chat.Id, InputFile.FromUri(url), replyMarkup: replyKeyboardMarkup, cancellationToken: token);
                 update.Message.Text = null;
                 break;
 
